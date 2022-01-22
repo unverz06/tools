@@ -20,5 +20,5 @@ Local
 │   ├── function.py
 │   └── head.py
 ├── support_resistance.py # -- By Skeletozaure https://gist.github.com/skeletozaure --
-└── sizing_for_future.py
+└── sizing_for_future.py # -- By MrFreez73 --
 ```
