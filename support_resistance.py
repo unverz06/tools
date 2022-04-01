@@ -1,11 +1,11 @@
 from engine.head import *
 from engine.function import Helpers as hlp
 
-filename = 'data/' + 'BTCUSDT_DATA_2022.json'
+filename = 'data/' + 'XRPUSDT_DATA_2022.json'
 
 if os.path.exists(filename):
     df = pd.read_json(path_or_buf=filename, orient='index')
-    df = df['2020-01-01':] # date de début uniquement
+    #df = df['2020-01-01':] # date de début uniquement
     #df = df['2021-01-01':'2021-05-01'] # date de début et de fin
     print("\nData pandas loaded 100%...\n")
 else:

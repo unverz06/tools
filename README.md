@@ -8,6 +8,10 @@ pip install python-binance
 ...
 ```
 Check that all packages are installed
+Use Virtual ENV for local : https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
+```
+source env/bin/activate
+```
 
 # Exemple d'arborescence
 ```bash

@@ -3,9 +3,9 @@ from engine.head import *
 client = Client()
 date = datetime.today().strftime('%Y')
 
-for paircoin in ['BTCUSDT', 'ETHUSDT', 'AVAXUSDT', 'SOLUSDT', 'MATICUSDT', 'EGLDUSDT']:
+for paircoin in ['BTCUSDT', 'ETHUSDT', 'AVAXUSDT', 'SOLUSDT', 'MATICUSDT', 'EGLDUSDT', 'XRPUSDT']:
 
-    klinesT = client.get_historical_klines(paircoin, Client.KLINE_INTERVAL_1HOUR, "26 january 2022")
+    klinesT = client.get_historical_klines(paircoin, Client.KLINE_INTERVAL_1HOUR, "01 january 2019")
 
     df = pd.DataFrame(klinesT, columns = ['timestamp', 'open', 'high', 'low', 'close', 'volume', 'close_time', 'quote_av', 'trades', 'tb_base_av', 'tb_quote_av', 'ignore' ])
     df['close'] = pd.to_numeric(df['close'])

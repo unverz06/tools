@@ -8,9 +8,9 @@
 #Paramètres de base
 capital_init = 100     #capital dédié au scalp
 perte_max = 1   #exprimé en % perte maxi autorisé par trade 10$ dans notre cas
-stop_loss = 1   #exprimé en % cas pour un stop loss fixe
+stop_loss = 3   #exprimé en % cas pour un stop loss fixe
 rr = 5         #Risk Reward = % TP
-levier = 2      #Levier utilisé
+levier = 2    #Levier utilisé
 
 #Paramètres calculés
 perte_maxcalc = perte_max / 100
@@ -18,7 +18,7 @@ perte_maxvalue = capital_init * perte_maxcalc
 stop_losscalc = stop_loss / 100
 
 # longIniPrice = round(row['close'],2)    A utilsier dans un bot
-longIniPrice = 30000     #Pour exemple
+longIniPrice = 66     #Pour exemple
 
 
 #Pour un Long
