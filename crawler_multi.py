@@ -27,4 +27,4 @@ for paircoin in ['BTCUSDT', 'ETHUSDT', 'AVAXUSDT', 'SOLUSDT', 'MATICUSDT', 'EGLD
     file = str(paircoin) + '_DATA_' + str(date) + '.json'
     os.system("mv " + file + " data/")
 
-    print("Data generated for ", paircoin)
+    print("Data generated for", paircoin)

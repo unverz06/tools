@@ -8,7 +8,8 @@ pip install python-binance
 ...
 ```
 Check that all packages are installed
-Use Virtual ENV for local : https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
+# Installation de l'env local
+https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
 ```
 source env/bin/activate
 ```
@@ -27,3 +28,6 @@ Local
 ├── support_resistance.py # -- By Skeletozaure — https://gist.github.com/skeletozaure --
 └── sizing_for_future.py # -- By MrFreez73 — Discord CryptoRobot --
 ```
+
+# Notes
+Utilisation simple avec MacOS et VSCODE
