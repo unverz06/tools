@@ -1,7 +1,7 @@
 from engine.head import *
-from engine.function import Helpers as hlp
+from engine.function import Clusters as clter
 
-filename = 'data/' + 'XRPUSDT_DATA_2022.json'
+filename = 'data/' + 'BTCUSDT_DATA_2022.json'
 
 if os.path.exists(filename):
     df = pd.read_json(path_or_buf=filename, orient='index')
@@ -15,9 +15,9 @@ else:
 dfSupAndRes = df
 lows = pd.DataFrame(data=dfSupAndRes, index=dfSupAndRes.index, columns=["low"])
 highs = pd.DataFrame(data=dfSupAndRes, index=dfSupAndRes.index, columns=["high"])
-low_centers = hlp.get_optimum_clusters(lows)
+low_centers = clter.get_optimum_clusters(lows)
 low_centers = sorted(low_centers)
-high_centers = hlp.get_optimum_clusters(highs)
+high_centers = clter.get_optimum_clusters(highs)
 high_centers = sorted(high_centers)
 
 print(low_centers)

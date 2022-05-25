@@ -18,16 +18,14 @@ source env/bin/activate
 ```bash
 Local
 ├── data
-│   ├── BTCUSDT_DATA_2022.json
-│   └── ETHUSDT_DATA_2022.json
+│   ├── BTCUSDT_DATA_2022_INTERVAL_5m.json
+│   └── ETHUSDT_DATA_2022_INTERVAL_5m.json
 ├── engine
 │   ├── function.py
 │   └── head.py
 ├── crawler_multi.py # -- By Unverz06 --
 ├── import_data_sample.py # -- By Unverz06 --
-├── support_resistance.py # -- By Skeletozaure — https://gist.github.com/skeletozaure --
-└── sizing_for_future.py # -- By MrFreez73 — Discord CryptoRobot --
-```
+└── support_resistance.py # -- By Skeletozaure — https://gist.github.com/skeletozaure --
 
 # Notes
 Utilisation simple avec MacOS et VSCODE

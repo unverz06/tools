@@ -1,6 +1,6 @@
 from engine.head import *
 
-filename = 'data/' + 'BTCUSDT_DATA_2022.json'
+filename = 'data/' + 'BTCUSDT_DATA_2022_INTERVAL_5m.json'
 
 if os.path.exists(filename):
     df = pd.read_json(path_or_buf=filename, orient='index')
