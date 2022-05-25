@@ -1,6 +1,6 @@
 from engine.head import *
 
-class Helpers():
+class Clusters():
          
     def get_optimum_clusters(df):
         '''
