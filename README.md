@@ -1,4 +1,4 @@
-# Utilities
+# Tools
 # Installation des dépendances Python
 ```bash
 pip install pandas
