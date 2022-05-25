@@ -2,10 +2,11 @@ from engine.head import *
 
 client = Client()
 date = datetime.today().strftime('%Y')
+interval = Client.KLINE_INTERVAL_5MINUTE
 
-for paircoin in ['BTCUSDT', 'ETHUSDT', 'AVAXUSDT', 'SOLUSDT', 'MATICUSDT', 'EGLDUSDT', 'XRPUSDT']:
+for paircoin in ['BTCUSDT', 'ETHUSDT', 'MATICUSDT', 'EGLDUSDT']:
 
-    klinesT = client.get_historical_klines(paircoin, Client.KLINE_INTERVAL_1HOUR, "01 january 2019")
+    klinesT = client.get_historical_klines(paircoin, interval, "01 january 2022")
 
     df = pd.DataFrame(klinesT, columns = ['timestamp', 'open', 'high', 'low', 'close', 'volume', 'close_time', 'quote_av', 'trades', 'tb_base_av', 'tb_quote_av', 'ignore' ])
     df['close'] = pd.to_numeric(df['close'])
@@ -21,10 +22,10 @@ for paircoin in ['BTCUSDT', 'ETHUSDT', 'AVAXUSDT', 'SOLUSDT', 'MATICUSDT', 'EGLD
 
     result = df.to_json(orient="index")
     parsed = json.loads(result) 
-    with open(str(paircoin) + '_DATA_' + str(date) + '.json', 'w') as json_file:
+    with open(str(paircoin) + '_DATA_' + str(date) + '_INTERVAL_' + str(interval) + '.json', 'w') as json_file:
         json.dump(parsed, json_file)
 
-    file = str(paircoin) + '_DATA_' + str(date) + '.json'
+    file = str(paircoin) + '_DATA_' + str(date) + '_INTERVAL_' + str(interval) + '.json'
     os.system("mv " + file + " data/")
 
     print("Data generated for", paircoin)
